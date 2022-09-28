@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
 
-                archiveArtifacts artifacts: '**/*.jar'
+                archiveArtifacts artifacts: '**/jars/*.jar'
             }
         }
         stage('Test') {
