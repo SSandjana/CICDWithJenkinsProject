@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-
-                archiveArtifacts artifacts: '**/jars/*.jar'
+                make 'mvn clean compile'
+                archiveArtifacts artifacts: '**/target/*.jar'
             }
         }
         stage('Test') {
