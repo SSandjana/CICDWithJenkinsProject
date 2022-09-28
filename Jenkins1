@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
 
-                archiveArtifacts artifacts: 'target/CICDWithJenkins-1.0-SNAPSHOT.jar', fingerprint: true
+                archiveArtifacts artifacts: '**/CICDWithJenkins-1.0-SNAPSHOT.jar', fingerprint: true
             }
         }
         stage('Test') {
