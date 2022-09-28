@@ -6,13 +6,13 @@ pipeline {
             steps {
                 echo 'Building..'
 
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+                archiveArtifacts artifacts: 'C:\WorkspaceJava\CICDWithJenkins\target\CICDWithJenkins-1.0-SNAPSHOT.jar', fingerprint: true
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                
+
                 junit '**/target/*.xml'
             }
         }
